@@ -2,11 +2,14 @@ import React from 'react';
 import './App.css';
 
 import Planning from './Planning';
+import SearchPlanning from './SearchPlanning';
 
-const App = ({ liste_de_cours }) => 
+const App = () => 
     <div className="app">
-        <Planning liste_de_cours={ liste_de_cours } />
+        <div className="interactions">
+            <SearchPlanning />
+        </div>
+        <Planning />
     </div>
-
 
 export default App;

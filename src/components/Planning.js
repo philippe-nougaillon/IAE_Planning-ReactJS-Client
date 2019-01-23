@@ -1,11 +1,20 @@
 import React from 'react';
 import './Planning.css';
 
+import { connect } from 'react-redux';
+import { getReadablePlanning, getFetchError } from '../selectors/planning';
+
+
 import Cours from './Cours';
 
-const Planning = ({ liste_de_cours }) =>
+const mapStateToProps = state => ({
+    planning: state,
+    //error: getFetchError(state),
+});
+
+const Planning = ({ planning }) =>
     <div className="planning">
-        {(liste_de_cours || []).map(cours => 
+        {(planning || []).map(cours => 
             <Cours 
                 key={cours.id}
                 cours={cours}
@@ -13,4 +22,6 @@ const Planning = ({ liste_de_cours }) =>
         )}
     </div>
 
-export default Planning;
+export default connect(
+    mapStateToProps,
+)(Planning);

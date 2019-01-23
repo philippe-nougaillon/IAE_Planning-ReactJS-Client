@@ -1,0 +1,2 @@
+export const PLANNING_FETCH = 'PLANNING_FETCH';
+export const PLANNING_ADD = 'PLANNING_ADD';
