@@ -18,8 +18,8 @@ class SearchPlanning extends Component {
         super(props);
 
         this.state = {
-//          query: new Date().toISOString(),
-            query: '2019-01-28',
+          query: new Date().toISOString().substring(0,10),
+//            query: '2019-01-28',
         };
 
         this.onSubmit = this.onSubmit.bind(this);
