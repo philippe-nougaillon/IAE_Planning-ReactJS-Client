@@ -18,12 +18,14 @@ class SearchPlanning extends Component {
         super(props);
 
         this.state = {
-          query: new Date().toISOString().substring(0,10),
-//            query: '2019-01-28',
+            query: new Date().toISOString().substring(0,10),
+//          query: '2019-01-28',
+            searchTerm: '',
         };
 
         this.onSubmit = this.onSubmit.bind(this);
         this.onChange = this.onChange.bind(this);
+        this.onSearchChange = this.onSearchChange.bind(this);
     }
 
     onSubmit(event) {
@@ -40,6 +42,10 @@ class SearchPlanning extends Component {
         this.setState(applyQueryState(value));
     }
 
+    onSearchChange(event) {
+        this.setState({ searchTerm: event.target.value });
+    }
+
     render() {
         return (
             <form onSubmit={this.onSubmit}>
@@ -51,6 +57,11 @@ class SearchPlanning extends Component {
                 <button type="submit">
                     Search
                 </button>
+                <input
+                    type="text"
+                    value={this.state.searchTerm}
+                    onChange={this.onSearchChange}
+                />
             </form>
         );
     }

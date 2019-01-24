@@ -1,6 +1,7 @@
 import { 
     PLANNING_ADD, 
-    PLANNING_FETCH 
+    PLANNING_FETCH,
+    PLANNING_FETCH_ERROR,
 } from '../constants/actionTypes';
 
 const doAddPlanning = planning => ({
@@ -13,7 +14,13 @@ const doFetchPlanning = query => ({
     query,
 });
 
+const doFetchErrorPlanning = error => ({
+    type: PLANNING_FETCH_ERROR,
+    error,
+});
+
 export { 
     doAddPlanning, 
-    doFetchPlanning, 
+    doFetchPlanning,
+    doFetchErrorPlanning, 
 };

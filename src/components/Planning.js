@@ -7,15 +7,18 @@ import { connect } from 'react-redux';
 import Cours from './Cours';
 
 const mapStateToProps = state => ({
-    planning: state,
-    //error: getFetchError(state),
+    planning: state.planning,
+    error: state.error,
 });
 
-const Planning = ({ planning }) =>
+const Planning = ({ planning, error }) =>
     <div className="planning">
+
+        { error && <p>Something went wrong :(</p> }
+
         {(planning || []).map(cours => 
             <Cours 
-                key={cours.id}
+                key  ={cours.id}
                 cours={cours}
             />
         )}
