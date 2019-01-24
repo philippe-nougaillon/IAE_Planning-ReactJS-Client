@@ -2,8 +2,7 @@ import React from 'react';
 import './Planning.css';
 
 import { connect } from 'react-redux';
-import { getReadablePlanning, getFetchError } from '../selectors/planning';
-
+//import { getReadablePlanning, getFetchError } from '../selectors/planning';
 
 import Cours from './Cours';
 

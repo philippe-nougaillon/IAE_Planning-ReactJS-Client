@@ -10,11 +10,10 @@ const Cours = ({ cours }) => {
     } = cours;
     return(
         <div className="cours">
-            | <span>{ debut }</span>
-            | <span>{ formation_json }</span>
-            | <span>{ matiere_json }</span>
-            | <span>{ salle_json }</span>
-            |
+            <span>{ debut.substring(11,16) }</span> |
+            <span>{ formation_json }</span> |
+            <span>{ matiere_json }</span> |
+            <span>{ salle_json }</span>
         </div>
     )
 }
