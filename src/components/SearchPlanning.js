@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import { doFetchPlanning  } from '../actions/planning';
+import { doSetFilter } from '../actions/filter';
 
 // import Button from './Button';
 
 const mapDispatchToProps = (dispatch) => ({
     onFetchPlanning: query => dispatch(doFetchPlanning(query)),
+    onFilterSet: filter => dispatch(doSetFilter(filter)),
 });
 
 const applyQueryState = query => () => ({
@@ -19,8 +21,6 @@ class SearchPlanning extends Component {
 
         this.state = {
             query: new Date().toISOString().substring(0,10),
-//          query: '2019-01-28',
-            searchTerm: '',
         };
 
         this.onSubmit = this.onSubmit.bind(this);
@@ -32,7 +32,6 @@ class SearchPlanning extends Component {
         const { query } = this.state;
         if (query) {
             this.props.onFetchPlanning(query);
-//          this.setState(applyQueryState(''));
         }
         event.preventDefault();
     }
@@ -43,7 +42,7 @@ class SearchPlanning extends Component {
     }
 
     onSearchChange(event) {
-        this.setState({ searchTerm: event.target.value });
+        this.props.onFilterSet(event.target.value);
     }
 
     render() {
@@ -59,7 +58,6 @@ class SearchPlanning extends Component {
                 </button>
                 <input
                     type="text"
-                    value={this.state.searchTerm}
                     onChange={this.onSearchChange}
                 />
             </form>
