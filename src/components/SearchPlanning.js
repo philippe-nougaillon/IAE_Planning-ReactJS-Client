@@ -48,14 +48,17 @@ class SearchPlanning extends Component {
     render() {
         return (
             <form onSubmit={this.onSubmit}>
+                Date :
                 <input 
                     type="date"
                     value={this.state.query}
                     onChange={this.onChange}
                 />
                 <button type="submit">
-                    Search
+                    Planning !
                 </button>
+                <br />
+                Filtre:
                 <input
                     type="text"
                     onChange={this.onSearchChange}

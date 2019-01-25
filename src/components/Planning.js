@@ -14,7 +14,6 @@ const mapStateToProps = state => ({
 
 const Planning = ({ planning, filter, error }) =>
     <div className="planning">
-        <h2>{ filter }</h2>
 
         { error && <p>Something went wrong :(</p> }
 
@@ -26,6 +25,7 @@ const Planning = ({ planning, filter, error }) =>
                 />
             )
         }
+
     </div>
 
 export default connect(

@@ -5,16 +5,6 @@ const INITIAL_STATE = {
     error: null,
 };
 
-const applyAddPlanning = (state, action) => ({
-    planning: action.planning,
-    error: null,
-});
-
-const applyFetchErrorPlanning = (state, action) => ({
-    planning: [],
-    error: action.error,
-})
-
 function planningReducer(state = INITIAL_STATE, action) {
     switch(action.type) {
         case PLANNING_ADD : {
@@ -26,5 +16,15 @@ function planningReducer(state = INITIAL_STATE, action) {
         default : return state;
     }
 }
+
+const applyAddPlanning = (state, action) => ({
+    planning: action.planning,
+    error: null,
+});
+
+const applyFetchErrorPlanning = (state, action) => ({
+    planning: [],
+    error: action.error,
+})
 
 export default planningReducer;
