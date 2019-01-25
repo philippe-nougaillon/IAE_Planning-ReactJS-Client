@@ -1,10 +1,10 @@
-const getReadablePlanning = ({ planningState}) => 
+const getReadablePlanning = ({ planningState }) => 
     planningState.planning;
 
-// const getFetchError = ({ storyState }) =>
-//     storyState.error;
+const getFetchError = ({ planningState }) =>
+    planningState.error;
 
 export {
     getReadablePlanning,
-    // getFetchError,
+    getFetchError,
 };

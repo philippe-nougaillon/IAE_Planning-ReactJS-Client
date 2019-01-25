@@ -2,13 +2,13 @@ import React from 'react';
 import './Planning.css';
 
 import { connect } from 'react-redux';
-//import { getReadablePlanning, getFetchError } from '../selectors/planning';
+//import { getFetchError } from '../selectors/planning';
 
 import Cours from './Cours';
 
 const mapStateToProps = state => ({
-    planning: state.planning,
-    error: state.error,
+    planning: state.planningState.planning,
+    error: state.planningState.error,
 });
 
 const Planning = ({ planning, error }) =>

@@ -7,6 +7,7 @@ const INITIAL_STATE = {
 
 const applyAddPlanning = (state, action) => ({
     planning: action.planning,
+    error: null,
 });
 
 const applyFetchErrorPlanning = (state, action) => ({
