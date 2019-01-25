@@ -4,8 +4,6 @@ import { connect } from 'react-redux';
 import { doFetchPlanning  } from '../actions/planning';
 import { doSetFilter } from '../actions/filter';
 
-// import Button from './Button';
-
 const mapDispatchToProps = (dispatch) => ({
     onFetchPlanning: query => dispatch(doFetchPlanning(query)),
     onFilterSet: filter => dispatch(doSetFilter(filter)),
@@ -48,16 +46,17 @@ class SearchPlanning extends Component {
     render() {
         return (
             <form onSubmit={this.onSubmit}>
+
                 Date :
                 <input 
                     type="date"
                     value={this.state.query}
                     onChange={this.onChange}
                 />
-                <button type="submit">
-                    Planning !
-                </button>
+
+                <button type="submit">Charger</button>
                 <br />
+
                 Filtre:
                 <input
                     type="text"
