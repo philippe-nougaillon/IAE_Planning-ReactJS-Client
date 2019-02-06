@@ -15,15 +15,11 @@ const mapStateToProps = state => ({
 const Planning = ({ planning, filter, error }) =>
     <div className="planning">
 
-        { error && <p>Something went wrong :(</p> }
-
-        {getFiltredPlanning(planning, filter)
-            .map(cours => 
-                <Cours 
-                    key  ={cours.id}
-                    cours={cours}
-                />
-            )
+        { error ? <p>Something went wrong...</p> 
+                : getFiltredPlanning(planning, filter)
+                        .map(cours => 
+                            <Cours key={cours.id} cours={cours}/>
+                        )
         }
 
     </div>

@@ -7,7 +7,8 @@ const Cours = ({ cours }) => {
         fin,
         formation_json,
         matiere_json,
-        salle_json
+        intervenant_json,
+        salle_json,
     } = cours;
 
     return(
@@ -15,13 +16,16 @@ const Cours = ({ cours }) => {
             <span style= {{ width: '10%' }}>
                 <b>{ debut.substring(11,16) }</b> - { fin.substring(11,16) }
             </span>
-            <span style= {{ width: '30%', fontWeight: 'bold' }}>
+            <span style= {{ width: '35%', fontWeight: 'bold' }}>
                 { formation_json }
             </span>
-            <span  style= {{ width: '40%' }}>
+            <span  style= {{ width: '25%' }}>
                 { matiere_json }
             </span>
-            <span style= {{ width: '5%', fontWeight: 'bold' }}>
+            <span style= {{ width: '20%' }} >
+                { intervenant_json }
+            </span>
+            <span style= {{ width: '10%' }} >
                 { salle_json }
             </span>
         </div>

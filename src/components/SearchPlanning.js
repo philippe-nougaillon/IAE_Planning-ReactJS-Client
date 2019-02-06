@@ -21,22 +21,18 @@ class SearchPlanning extends Component {
             query: new Date().toISOString().substring(0,10),
         };
 
-        this.onSubmit = this.onSubmit.bind(this);
-        this.onChange = this.onChange.bind(this);
+        this.onDateChange = this.onDateChange.bind(this);
         this.onSearchChange = this.onSearchChange.bind(this);
     }
 
-    onSubmit(event) {
-        const { query } = this.state;
-        if (query) {
-            this.props.onFetchPlanning(query);
-        }
-        event.preventDefault();
+    componentDidMount() {
+        this.props.onFetchPlanning(this.state.query);
     }
-
-    onChange(event) {
+    
+    onDateChange(event) {
         const { value } = event.target;
         this.setState(applyQueryState(value));
+        this.props.onFetchPlanning(value);
     }
 
     onSearchChange(event) {
@@ -46,18 +42,14 @@ class SearchPlanning extends Component {
     render() {
         return (
             <form onSubmit={this.onSubmit}>
-
-                Date :
+                <label>Date:</label>
                 <input 
                     type="date"
                     value={this.state.query}
-                    onChange={this.onChange}
+                    onChange={this.onDateChange}
                 />
 
-                <button type="submit">Charger</button>
-                <br />
-
-                Filtre:
+                <label>Filtre:</label>
                 <input
                     type="text"
                     onChange={this.onSearchChange}

@@ -1,5 +1,6 @@
 import { 
     PLANNING_ADD, 
+    PLANNING_LOADING,
     PLANNING_FETCH,
     PLANNING_FETCH_ERROR,
 } from '../constants/actionTypes';
@@ -7,6 +8,10 @@ import {
 const doAddPlanning = planning => ({
     type: PLANNING_ADD,
     planning,
+});
+
+const doLoadingPlanning = ({
+    type: PLANNING_LOADING,
 });
 
 const doFetchPlanning = query => ({
@@ -21,6 +26,7 @@ const doFetchErrorPlanning = error => ({
 
 export { 
     doAddPlanning, 
+    doLoadingPlanning,
     doFetchPlanning,
     doFetchErrorPlanning, 
 };
