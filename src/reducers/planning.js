@@ -1,4 +1,7 @@
-import { PLANNING_ADD, PLANNING_LOADING, PLANNING_FETCH_ERROR } from '../constants/actionTypes';
+import { PLANNING_ADD, 
+         PLANNING_LOADING, 
+         PLANNING_FETCH_ERROR
+} from '../constants/actionTypes';
 
 const INITIAL_STATE = {
     planning: [],

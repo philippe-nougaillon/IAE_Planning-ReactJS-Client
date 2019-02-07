@@ -7,19 +7,17 @@ import { getFiltredPlanning } from '../selectors/planning';
 import Cours from './Cours';
 
 const mapStateToProps = state => ({
-    planning: state.planningState.planning,
-    filter: state.filterState,
+    planning: getFiltredPlanning(state.planningState.planning, state.filterState ),
     error: state.planningState.error,
 });
 
-const Planning = ({ planning, filter, error }) =>
+const Planning = ({ planning, error }) =>
     <div className="planning">
 
         { error ? <p>Something went wrong...</p> 
-                : getFiltredPlanning(planning, filter)
-                        .map(cours => 
-                            <Cours key={cours.id} cours={cours}/>
-                        )
+                : planning.map(cours => 
+                                    <Cours key={cours.id} cours={cours}/>
+                                )
         }
 
     </div>
