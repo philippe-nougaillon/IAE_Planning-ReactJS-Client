@@ -5,12 +5,12 @@ import { doFetchPlanning  } from '../actions/planning';
 import { doSetFilter } from '../actions/filter';
 
 const mapDispatchToProps = (dispatch) => ({
-    onFetchPlanning: query => dispatch(doFetchPlanning(query)),
+    onFetchPlanning: queryDate => dispatch(doFetchPlanning(queryDate)),
     onFilterSet: filter => dispatch(doSetFilter(filter)),
 });
 
-const applyQueryState = query => () => ({
-    query
+const applyQueryDateState = queryDate => () => ({
+    queryDate
 });
 
 class SearchPlanning extends Component {
@@ -18,7 +18,7 @@ class SearchPlanning extends Component {
         super(props);
 
         this.state = {
-            query: new Date().toISOString().substring(0,10),
+            queryDate: new Date().toISOString().substring(0,10),
         };
 
         this.onDateChange = this.onDateChange.bind(this);
@@ -26,13 +26,13 @@ class SearchPlanning extends Component {
     }
 
     componentDidMount() {
-        this.props.onFetchPlanning(this.state.query);
+        this.props.onFetchPlanning(this.state.queryDate);
     }
     
     onDateChange(event) {
         const { value } = event.target;
-    
-        this.setState(applyQueryState(value));
+
+        this.setState(applyQueryDateState(value));
         this.props.onFetchPlanning(value);
     }
 
@@ -46,13 +46,14 @@ class SearchPlanning extends Component {
                 <label>Date:</label>
                 <input 
                     type="date"
-                    value={this.state.query}
+                    value={this.state.queryDate}
                     onChange={this.onDateChange}
                 />
 
                 <label>Filtre:</label>
                 <input
                     type="text"
+                    value={this.state.filter}
                     onChange={this.onSearchChange}
                 />
             </form>

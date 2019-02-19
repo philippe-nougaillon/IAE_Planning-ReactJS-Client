@@ -16,8 +16,8 @@ const Planning = ({ planning, error }) =>
 
         { error ? <p>Something went wrong...</p> 
                 : planning.map(cours => 
-                                    <Cours key={cours.id} cours={cours}/>
-                                )
+                            <Cours key={cours.id} cours={cours}/>
+                        )
         }
 
     </div>

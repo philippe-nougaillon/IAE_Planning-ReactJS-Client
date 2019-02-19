@@ -4,7 +4,7 @@ import {
 
 const doSetFilter = filter => ({
     type: FILTER_SET,
-    filter,
+    filter: filter.toLowerCase(),
 });
 
 export { 

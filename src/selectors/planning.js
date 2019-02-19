@@ -1,19 +1,10 @@
-// function getFiltredPlanning(planning, filter) {
-            
-//     return  planning.filter(cours => 
-//         cours.formation_json_v2.toLowerCase().includes(filter.toLowerCase()) ||
-//         cours.intervenant_json.toLowerCase().includes(filter.toLowerCase()) ||
-//         cours.salle_json_v2.toLowerCase().includes(filter.toLowerCase())
-//         )
-// }
+const getFiltredPlanning = (planning, filter) =>
 
-const getFiltredPlanning = ( planning, filter ) =>
     planning.filter(cours => 
-        cours.formation_json_v2.toLowerCase().includes(filter.toLowerCase()) ||
-        cours.intervenant_json.toLowerCase().includes(filter.toLowerCase()) ||
-        cours.salle_json_v2.toLowerCase().includes(filter.toLowerCase())
-        );
-
+                cours.formation_json_v2.toLowerCase().includes(filter) ||
+                cours.intervenant_json.toLowerCase().includes(filter) ||
+                cours.salle_json_v2.toLowerCase().includes(filter)
+                );
 
 export {
     getFiltredPlanning,
