@@ -23,7 +23,7 @@ const Cours = ({ cours }) => {
                         <b>{ debut_fin_json_v2 }</b>
                     </Typography>
                 </Grid>
-                <Grid item xs={6} sm={3}>
+                <Grid item xs={8} sm={3}>
                     <Typography noWrap>
                         <b>{ formation_json_v2 }</b>
                     </Typography>
