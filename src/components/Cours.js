@@ -17,7 +17,7 @@ const Cours = ({ cours }) => {
 
     return(
         <div className="cours">
-            <Grid container spacing={5}>
+            <Grid container spacing={8}>
                 <Grid item xs={4} sm={1}>
                     <Typography noWrap>
                         <b>{ debut_fin_json_v2 }</b>
