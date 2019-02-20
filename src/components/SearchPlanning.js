@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import TextField from '@material-ui/core/TextField';
-
 import { doFetchPlanning  } from '../actions/planning';
 import { doSetFilter } from '../actions/filter';
+
+import TextField from '@material-ui/core/TextField';
 
 const mapDispatchToProps = (dispatch) => ({
     onFetchPlanning: queryDate => dispatch(doFetchPlanning(queryDate)),

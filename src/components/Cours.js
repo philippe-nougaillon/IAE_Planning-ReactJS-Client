@@ -12,19 +12,19 @@ const Cours = ({ cours }) => {
 
     return(
         <div className="cours">
-            <span style= {{ width: '7%', fontWeight: 'bold' }}>
+            <span style= {{ width: '7%' }}>
                 { debut_fin_json_v2 }
             </span>
-            <span style= {{ width: '30%', fontWeight: 'bold' }}>
+            <span style= {{ width: '30%' }}>
                 { formation_json_v2 }
             </span>
-            <span  style= {{ width: '33%' }}>
+            <span  style= {{ width: '33%', fontWeight: 'lighter' }}>
                 { matiere_json }
             </span>
-            <span style= {{ width: '20%' }} >
+            <span style= {{ width: '20%', fontWeight: 'lighter' }} >
                 { intervenant_json }
             </span>
-            <span style= {{ width: '10%' }} >
+            <span style= {{ width: '10%', fontWeight: 'lighter' }} >
                 { salle_json_v2 }
             </span>
         </div>
