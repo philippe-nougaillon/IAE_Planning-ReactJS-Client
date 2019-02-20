@@ -23,7 +23,7 @@ const styles = theme => ({
   },
   title: {
     display: 'none',
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up('xs')]: {
       display: 'block',
     },
   },
@@ -84,6 +84,7 @@ function SearchAppBar(props) {
           </Typography>
 
           <div className={classes.grow} />
+
           {/* <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
@@ -96,6 +97,7 @@ function SearchAppBar(props) {
               }}
             />
           </div> */}
+          
         </Toolbar>
       </AppBar>
     </div>
