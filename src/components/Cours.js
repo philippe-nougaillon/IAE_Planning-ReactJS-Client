@@ -18,22 +18,22 @@ const Cours = ({ cours }) => {
     return(
         <div className="cours">
             <Grid container spacing={5}>
-                <Grid item xs={3} sm={1}>
-                    <Typography>
+                <Grid item xs={4} sm={1}>
+                    <Typography noWrap>
                         <b>{ debut_fin_json_v2 }</b>
                     </Typography>
                 </Grid>
                 <Grid item xs={6} sm={3}>
-                    <Typography>
+                    <Typography noWrap>
                         <b>{ formation_json_v2 }</b>
                     </Typography>
                 </Grid>
                 <Grid item xs={12} sm={2}>
-                    <Typography>
+                    <Typography noWrap>
                         { intervenant_json }
                     </Typography>
                 </Grid>
-                <Grid item xs={12} sm={5} zeroMinWidth>
+                <Grid item xs={12} sm={5}>
                     <Typography noWrap>
                         <i>{ matiere_json }</i>
                     </Typography>
