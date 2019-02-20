@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://philippe-nougaillon.github.io/openplanning-react-client/",
   "dependencies": {
+    "@material-ui/core": "^3.9.2",
     "gh-pages": "^2.0.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",

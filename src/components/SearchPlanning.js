@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import TextField from '@material-ui/core/TextField';
+
 import { doFetchPlanning  } from '../actions/planning';
 import { doSetFilter } from '../actions/filter';
 
@@ -43,19 +45,26 @@ class SearchPlanning extends Component {
     render() {
         return (
             <form onSubmit={this.onSubmit}>
-                <label>Date:</label>
-                <input 
+
+                <TextField
+                    id="date-select"
+                    label="Date"
+                    className="textField"
                     type="date"
                     value={this.state.queryDate}
                     onChange={this.onDateChange}
                 />
 
-                <label>Filtre:</label>
-                <input
-                    type="text"
+
+                <TextField
+                    id="standard-search"
+                    label="Filtre"
+                    type="search"
+                    className="textField"
                     value={this.state.filter}
                     onChange={this.onSearchChange}
                 />
+
             </form>
         );
     }
