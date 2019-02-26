@@ -3,7 +3,6 @@ import './App.css';
 
 import AppBar from './AppBar';
 
-
 import Planning from './Planning';
 import SearchPlanning from './SearchPlanning';
 
