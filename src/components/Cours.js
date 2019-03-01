@@ -2,6 +2,8 @@ import React from 'react';
 
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import LinearProgress from '@material-ui/core/LinearProgress';
+
 import 'typeface-roboto';
 
 import './Cours.css';
@@ -13,6 +15,7 @@ const Cours = ({ cours }) => {
         matiere_json,
         intervenant_json,
         salle_json_v2,
+        progress_bar_pct2,
     } = cours;
 
     return(
@@ -42,6 +45,10 @@ const Cours = ({ cours }) => {
                     <Typography color="primary">
                         <b>{ salle_json_v2 }</b>
                     </Typography>
+                    { progress_bar_pct2 
+                        ? <LinearProgress variant="determinate" value={ progress_bar_pct2 } />
+                        : null 
+                    }
                 </Grid>
             </Grid>
         </div>
