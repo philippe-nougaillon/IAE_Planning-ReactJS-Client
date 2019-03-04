@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Grid from '@material-ui/core/Grid';
+import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
 import LinearProgress from '@material-ui/core/LinearProgress';
 
@@ -10,6 +11,7 @@ import './Cours.css';
 
 const Cours = ({ cours }) => {
     const {
+        id,
         debut_fin_json_v2,
         formation_json_v2,
         matiere_json,
@@ -18,12 +20,16 @@ const Cours = ({ cours }) => {
         progress_bar_pct2,
     } = cours;
 
+    const url = "https://iae-test.philnoug.com/cours/" + id;
+
     return(
         <div className="cours">
             <Grid container spacing={8}>
                 <Grid item xs={4} sm={1}>
                     <Typography noWrap>
-                        <b>{ debut_fin_json_v2 }</b>
+                        <Link href={ url } target="_blank" rel="noreferrer" color="inherit">
+                            <b>{ debut_fin_json_v2 }</b>
+                        </Link>
                     </Typography>
                 </Grid>
                 <Grid item xs={8} sm={3}>
