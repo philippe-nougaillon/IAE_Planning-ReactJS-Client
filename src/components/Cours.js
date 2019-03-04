@@ -6,8 +6,9 @@ import Typography from '@material-ui/core/Typography';
 import LinearProgress from '@material-ui/core/LinearProgress';
 
 import 'typeface-roboto';
-
 import './Cours.css';
+
+import { BASE_URL } from '../api/planning';
 
 const Cours = ({ cours }) => {
     const {
@@ -20,14 +21,14 @@ const Cours = ({ cours }) => {
         progress_bar_pct2,
     } = cours;
 
-    const url = "https://iae-test.philnoug.com/cours/" + id;
+    const cours_url =  BASE_URL +  "cours/" + id;
 
     return(
         <div className="cours">
             <Grid container spacing={8}>
                 <Grid item xs={4} sm={1}>
                     <Typography noWrap>
-                        <Link href={ url } target="_blank" rel="noreferrer" color="inherit">
+                        <Link href={ cours_url } target="_blank" rel="noreferrer" color="inherit">
                             <b>{ debut_fin_json_v2 }</b>
                         </Link>
                     </Typography>
