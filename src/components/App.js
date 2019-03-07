@@ -3,8 +3,8 @@ import './App.css';
 
 import AppBar from './AppBar';
 
-import Planning from './Planning';
 import SearchPlanning from './SearchPlanning';
+import Planning from './Planning';
 
 const App = () => 
     <div className="app">
