@@ -7,6 +7,8 @@ import filterReducer from '../reducers/filter';
 
 import rootSaga from '../sagas';
 
+import thunk from 'redux-thunk';
+
 const logger = createLogger();
 
 const saga = createSagaMiddleware();
@@ -18,7 +20,7 @@ const rootReducer = combineReducers({
 
 const store = createStore (
     rootReducer,
-    applyMiddleware(saga, logger),
+    applyMiddleware(thunk, saga, logger),
 );
 
 saga.run(rootSaga);

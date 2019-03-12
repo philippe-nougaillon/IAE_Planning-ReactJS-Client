@@ -70,6 +70,7 @@ const styles = theme => ({
   },
 });
 
+
 function SearchAppBar(props) {
   const { classes } = props;
   return (

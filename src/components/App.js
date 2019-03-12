@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 
 import AppBar from './AppBar';
-
 import SearchPlanning from './SearchPlanning';
 import Planning from './Planning';
 

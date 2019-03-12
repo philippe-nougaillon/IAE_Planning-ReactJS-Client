@@ -19,6 +19,16 @@ const doFetchPlanning = query => ({
     query,
 });
 
+function doFetchPlanningWithRefresh(query) {
+    return function (dispatch) {
+        dispatch(doFetchPlanning(query));
+
+        setTimeout(function() {
+            dispatch(doFetchPlanningWithRefresh(query));
+        }, 60 * 1000);
+    }
+}
+
 const doFetchErrorPlanning = error => ({
     type: PLANNING_FETCH_ERROR,
     error,
@@ -28,5 +38,6 @@ export {
     doAddPlanning, 
     doLoadingPlanning,
     doFetchPlanning,
-    doFetchErrorPlanning, 
+    doFetchErrorPlanning,
+    doFetchPlanningWithRefresh, 
 };
