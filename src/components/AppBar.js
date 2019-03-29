@@ -9,7 +9,6 @@ import { fade } from '@material-ui/core/styles/colorManipulator';
 import MenuIcon from '@material-ui/icons/Menu';
 import { withStyles } from '@material-ui/core/styles';
 
-
 const styles = theme => ({
   root: {
     width: '100%',
@@ -83,7 +82,7 @@ function SearchAppBar(props) {
           </IconButton>
 
           <Typography className={classes.title} variant="h6" color="inherit" noWrap>
-            Planning
+            Planning IAE-Paris
           </Typography>
 
           <div className={classes.grow} />

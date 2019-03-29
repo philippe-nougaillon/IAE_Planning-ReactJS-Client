@@ -1,10 +1,12 @@
-import { PLANNING_ADD, 
-         PLANNING_LOADING, 
-         PLANNING_FETCH_ERROR
+import { 
+    PLANNING_ADD, 
+    PLANNING_LOADING, 
+    PLANNING_FETCH_ERROR
 } from '../constants/actionTypes';
 
 const INITIAL_STATE = {
     planning: [],
+    size: 0,
     loading: false,
     error: null,
 };
@@ -26,10 +28,9 @@ function planningReducer(state = INITIAL_STATE, action) {
 
 const applyAddPlanning = (state, action) => ({
     planning: action.planning,
+    size: action.planning.length,
     error: null,
 });
-
-
 
 const applyFetchErrorPlanning = (state, action) => ({
     planning: [],

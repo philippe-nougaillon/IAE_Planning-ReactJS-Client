@@ -9,22 +9,25 @@ import Cours from './Cours';
 
 const mapStateToProps = state => ({
     planning: getFiltredPlanning(state.planningState.planning, state.filterState ),
+    size: state.planningState.size,
     filter: state.filterState,
     error: state.planningState.error,
 
 });
 
-const Planning = ({ planning, error, filter }) =>
+const Planning = ({ planning, size, error, filter }) =>
     <div className="planning">
-        { error ? <p>Erreur...</p> 
-                : planning.map(cours => 
-                        <Cours key={cours.id} cours={cours}/>
-                    )
+        { error && <p>Oups ! Les données n'ont pas pu être chargées...</p> } 
+        
+        {   planning.map(cours => 
+                <Cours key={cours.id} cours={cours}/>
+            )
         }
+
         <div className="footer">
             <Typography noWrap color="textSecondary" >
                 { planning.length } cours
-                { filter ? " (filtrés)" : " au total" }
+                { filter && ` (filtrés) sur ${ size }` } au total
             </Typography>
         </div>
     </div>

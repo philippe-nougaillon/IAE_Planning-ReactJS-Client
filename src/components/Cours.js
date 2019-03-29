@@ -12,13 +12,14 @@ import { BASE_URL } from '../api/planning';
 const Cours = ({ cours }) => {
     const {
         id,
+        etat,
         debut_fin_json_v2,
         formation_json_v2,
         formation_color_json_v2,
         matiere_json,
         intervenant_json,
         salle_json_v2,
-        progress_bar_pct2,
+        progress_bar_pct2
     } = cours;
 
     const cours_url = BASE_URL + "cours/" + id;
@@ -51,9 +52,15 @@ const Cours = ({ cours }) => {
                     </Typography>
                 </Grid>
 
-                <Grid item xs={12} sm={5}>
+                <Grid item xs={12} sm={4}>
                     <Typography noWrap>
                         <i>{ matiere_json }</i>
+                    </Typography>
+                </Grid>
+
+                <Grid item xs={12} sm={1}>
+                    <Typography noWrap  style={{ textTransform: "capitalize" }} >
+                        <i>{ etat }</i>
                     </Typography>
                 </Grid>
 
@@ -62,8 +69,7 @@ const Cours = ({ cours }) => {
                         <b>{ salle_json_v2 }</b>
                     </Typography>
                     { progress_bar_pct2 
-                        ? <LinearProgress variant="determinate" value={ progress_bar_pct2 } />
-                        : null 
+                        && <LinearProgress variant="determinate" value={ progress_bar_pct2 } color="secondary" />
                     }
                 </Grid>
             </Grid>

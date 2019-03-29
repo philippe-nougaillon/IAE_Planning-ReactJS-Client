@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { doFetchPlanningWithRefresh  } from '../actions/planning';
+import { doFetchPlanningWithRefresh } from '../actions/planning';
 import { doSetFilter } from '../actions/filter';
 
 import TextField from '@material-ui/core/TextField';
@@ -14,7 +14,6 @@ const mapDispatchToProps = (dispatch) => ({
 const applyQueryDateState = queryDate => () => ({
     queryDate
 });
-
 
 
 class SearchPlanning extends Component {
@@ -56,7 +55,6 @@ class SearchPlanning extends Component {
                     value={this.state.queryDate}
                     onChange={this.onDateChange}
                 />
-
 
                 <TextField
                     id="standard-search"
