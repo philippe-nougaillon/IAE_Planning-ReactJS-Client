@@ -69,14 +69,12 @@ const styles = theme => ({
   },
 });
 
-
 function SearchAppBar(props) {
   const { classes } = props;
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="relative" >
         <Toolbar>
-
           <IconButton className={classes.menuButton} color="inherit" aria-label="Open drawer">
             <MenuIcon />
           </IconButton>
@@ -86,7 +84,6 @@ function SearchAppBar(props) {
           </Typography>
 
           <div className={classes.grow} />
-
         </Toolbar>
       </AppBar>
     </div>

@@ -52,6 +52,7 @@ class SearchPlanning extends Component {
                     label="Date"
                     className="textField"
                     type="date"
+                    style={{ marginRight: 20 }}
                     value={this.state.queryDate}
                     onChange={this.onDateChange}
                 />

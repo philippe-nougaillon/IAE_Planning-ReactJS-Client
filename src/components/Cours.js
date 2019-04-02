@@ -68,7 +68,7 @@ const Cours = ({ cours }) => {
                     <Typography color="primary">
                         <b>{ salle_json_v2 }</b>
                     </Typography>
-                    { progress_bar_pct2 
+                    { progress_bar_pct2
                         && <LinearProgress variant="determinate" value={ progress_bar_pct2 } color="secondary" />
                     }
                 </Grid>
