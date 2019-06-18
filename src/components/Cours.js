@@ -35,7 +35,7 @@ const Cours = ({ cours }) => {
                     </Typography>
                 </Grid>
 
-                <Grid item xs={8} sm={3}>
+                <Grid item xs={8} sm={4}>
                     <Typography noWrap>
                         <span style={{ background: formation_color_json_v2, 
                                         padding: 3, 
@@ -52,7 +52,7 @@ const Cours = ({ cours }) => {
                     </Typography>
                 </Grid>
 
-                <Grid item xs={12} sm={4}>
+                <Grid item xs={12} sm={3}>
                     <Typography noWrap>
                         <i>{ matiere_json }</i>
                     </Typography>
