@@ -17,7 +17,7 @@ const mapStateToProps = state => ({
 
 const Planning = ({ planning, size, error, filter }) =>
     <div className="planning">
-        { error && <p>Oups ! Les données n'ont pas pu être chargées...</p> } 
+        { error && <p>Oups ! Les données n'ont pas pu être chargées... </p> } 
         
         {   planning.map(cours => 
                 <Cours key={cours.id} cours={cours}/>
