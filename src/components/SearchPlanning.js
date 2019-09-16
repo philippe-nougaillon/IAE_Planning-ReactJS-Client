@@ -40,9 +40,11 @@ class SearchPlanning extends Component {
     }
 
     onSearchChange(event) {
-        event.preventDefault();
-        
         this.props.onFilterSet(event.target.value);
+    }
+
+    onSubmit(event) {
+        event.preventDefault();
     }
 
     render() {
