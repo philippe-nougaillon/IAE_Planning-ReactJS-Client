@@ -26,7 +26,8 @@ const Cours = ({ cours }) => {
 
     return(
         <div className="cours">
-            <Grid container spacing={8}>
+            <Grid container spacing={4}>
+
                 <Grid item xs={4} sm={1}>
                     <Typography noWrap color="primary">
                         <Link href={ cours_url } target="_blank" rel="noreferrer" color="inherit">
@@ -58,18 +59,23 @@ const Cours = ({ cours }) => {
                     </Typography>
                 </Grid>
 
-                <Grid item xs={12} sm={1}>
-                    <Typography noWrap  style={{ textTransform: "capitalize" }} >
-                        <i>{ etat }</i>
-                    </Typography>
-                </Grid>
+                { etat != "confirmé" &&
+                    <Grid item xs={12} sm={1}>
+                        <Typography noWrap style={{ textTransform: "capitalize" }} 
+                                    color="secondary">
+                            <i>{ etat }</i>
+                        </Typography>
+                    </Grid>
+                }
 
                 <Grid item xs={3} sm={1}>
                     <Typography color="primary">
                         <b>{ salle_json_v2 }</b>
                     </Typography>
                     { progress_bar_pct2
-                        && <LinearProgress variant="determinate" value={ progress_bar_pct2 } color="secondary" />
+                        && <LinearProgress variant="determinate" 
+                                            value={ progress_bar_pct2 } 
+                                            color="secondary" />
                     }
                 </Grid>
             </Grid>

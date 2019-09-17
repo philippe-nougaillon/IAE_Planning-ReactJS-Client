@@ -18,7 +18,7 @@ const styles = theme => ({
   },
   menuButton: {
     marginLeft: -12,
-    marginRight: 20,
+    marginRight: 0,
   },
   title: {
     display: 'none',
@@ -80,7 +80,7 @@ function SearchAppBar(props) {
           </IconButton>
 
           <Typography className={classes.title} variant="h6" color="inherit" noWrap>
-            Planning IAE-Paris
+            Planning
           </Typography>
 
           <div className={classes.grow} />
