@@ -59,7 +59,7 @@ const Cours = ({ cours }) => {
                     </Typography>
                 </Grid>
 
-                { etat != "confirmé" &&
+                { etat !== "confirmé" &&
                     <Grid item xs={12} sm={1}>
                         <Typography noWrap style={{ textTransform: "capitalize" }} 
                                     color="secondary">
