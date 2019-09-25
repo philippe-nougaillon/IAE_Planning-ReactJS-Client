@@ -26,7 +26,7 @@ const Cours = ({ cours }) => {
 
     return(
         <div className="cours">
-            <Grid container spacing={4}>
+            <Grid container spacing={8}>
 
                 <Grid item xs={4} sm={1}>
                     <Typography noWrap color="primary">

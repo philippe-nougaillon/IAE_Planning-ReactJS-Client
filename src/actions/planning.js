@@ -19,15 +19,15 @@ const doFetchPlanning = query => ({
     query,
 });
 
-function doFetchPlanningWithRefresh(query) {
-    return function (dispatch) {
-        dispatch(doFetchPlanning(query));
+// function doFetchPlanningWithRefresh(query) {
+//     return function (dispatch) {
+//         dispatch(doFetchPlanning(query));
 
-        setTimeout(function() {
-            dispatch(doFetchPlanningWithRefresh(query));
-        }, 60 * 1000);
-    }
-}
+//         setTimeout(function() {
+//             dispatch(doFetchPlanningWithRefresh(query));
+//         }, 60 * 1000);
+//     }
+// }
 
 const doFetchErrorPlanning = error => ({
     type: PLANNING_FETCH_ERROR,
@@ -39,5 +39,5 @@ export {
     doLoadingPlanning,
     doFetchPlanning,
     doFetchErrorPlanning,
-    doFetchPlanningWithRefresh, 
+//    doFetchPlanningWithRefresh, 
 };
