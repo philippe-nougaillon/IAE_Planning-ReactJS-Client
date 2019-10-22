@@ -26,12 +26,14 @@ const Cours = ({ cours }) => {
 
     return(
         <div className="cours">
-            <Grid container spacing={8}>
-
+            <Grid container spacing={0}>
                 <Grid item xs={4} sm={1}>
                     <Typography noWrap color="primary">
                         <Link href={ cours_url } target="_blank" rel="noreferrer" color="inherit">
-                            <b>{ debut_fin_json_v2 }</b>
+                            <b>
+                                { debut_fin_json_v2.substring(0,5) }
+                            </b>
+                            { debut_fin_json_v2.substring(5,13) }
                         </Link>
                     </Typography>
                 </Grid>
