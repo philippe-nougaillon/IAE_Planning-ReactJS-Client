@@ -27,8 +27,8 @@ const Cours = ({ cours }) => {
     return(
         <div className="cours">
             <Grid container spacing={0}>
-                <Grid item xs={4} sm={1}>
-                    <Typography noWrap color="primary">
+                <Grid item xs={12} sm={2}>
+                    <Typography noWrap variant="h6">
                         <Link href={ cours_url } target="_blank" rel="noreferrer" color="inherit">
                             <b>
                                 { debut_fin_json_v2.substring(0,5) }
@@ -38,8 +38,8 @@ const Cours = ({ cours }) => {
                     </Typography>
                 </Grid>
 
-                <Grid item xs={8} sm={4}>
-                    <Typography noWrap>
+                <Grid item xs={12} sm={4}>
+                    <Typography noWrap variant="h6">
                         <span style={{ background: formation_color_json_v2, 
                                         padding: 3, 
                                         marginRight: 5
@@ -55,7 +55,7 @@ const Cours = ({ cours }) => {
                     </Typography>
                 </Grid>
 
-                <Grid item xs={12} sm={3}>
+                <Grid item xs={12} sm={2}>
                     <Typography noWrap>
                         <i>{ matiere_json }</i>
                     </Typography>
@@ -70,15 +70,14 @@ const Cours = ({ cours }) => {
                     </Grid>
                 }
 
-                <Grid item xs={3} sm={1}>
-                    <Typography color="primary">
+                <Grid item xs={12} sm={1}>
+                    <Typography style={{ color: '#122e4c' }} variant="h6">
                         <b>{ salle_json_v2 }</b>
                     </Typography>
                     { progress_bar_pct2
                         && etat === "confirmé"
                         && <LinearProgress variant="determinate" 
-                                            value={ progress_bar_pct2 } 
-                                            color="secondary" />
+                                            value={ progress_bar_pct2 }  />
                     }
                 </Grid>
             </Grid>
