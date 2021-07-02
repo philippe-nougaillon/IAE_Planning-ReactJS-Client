@@ -17,10 +17,12 @@ const styles = theme => ({
     flexGrow: 1,
   },
   menuButton: {
+    color: '#e68708',
     marginLeft: -12,
     marginRight: 0,
   },
   title: {
+    color: '#122e4c',
     display: 'none',
     [theme.breakpoints.up('xs')]: {
       display: 'block',
@@ -74,13 +76,13 @@ function SearchAppBar(props) {
   return (
     <div className={classes.root}>
       <AppBar position="relative" >
-        <Toolbar>
-          <IconButton className={classes.menuButton} color="inherit" aria-label="Open drawer">
+        <Toolbar style={{ background: '#F8F9FA' }}>
+          <IconButton className={classes.menuButton} aria-label="Open drawer">
             <MenuIcon />
           </IconButton>
 
-          <Typography className={classes.title} variant="h6" color="inherit" noWrap>
-            Planning
+          <Typography className={classes.title} variant="h6" noWrap>
+            Planning IAE Paris-Sorbonne
           </Typography>
 
           <div className={classes.grow} />

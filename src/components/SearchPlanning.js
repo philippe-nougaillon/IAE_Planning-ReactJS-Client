@@ -6,6 +6,7 @@ import { doFetchPlanning } from '../actions/planning';
 import { doSetFilter } from '../actions/filter';
 
 import TextField from '@material-ui/core/TextField';
+import Grid from '@material-ui/core/Grid';
 
 const mapDispatchToProps = (dispatch) => ({
 //    onFetchPlanning: queryDate => dispatch(doFetchPlanningWithRefresh(queryDate)),
@@ -52,26 +53,31 @@ class SearchPlanning extends Component {
     render() {
         return (
             <form onSubmit={this.onSubmit}>
+                <Grid container spacing={0}>
+                    <Grid item xs={4} sm={2}>
+                        <TextField
+                            id="date-select"
+                            label="Date"
+                            className="textField"
+                            type="date"
+                            style={{ marginRight: 5 }}
+                            value={this.state.queryDate}
+                            onChange={this.onDateChange}
+                        />
+                    </Grid>
 
-                <TextField
-                    id="date-select"
-                    label="Date"
-                    className="textField"
-                    type="date"
-                    style={{ marginRight: 5 }}
-                    value={this.state.queryDate}
-                    onChange={this.onDateChange}
-                />
-
-                <TextField
-                    id="standard-search"
-                    label="Filtre"
-                    type="search"
-                    className="textField"
-                    value={this.state.filter}
-                    onChange={this.onSearchChange}
-                />
-
+                    <Grid item xs={8} sm={4}>
+                        <TextField
+                            id="standard-search"
+                            label="Filtre"
+                            type="search"
+                            className="textField"
+                            style={{ width: '100%' }}
+                            value={this.state.filter}
+                            onChange={this.onSearchChange}
+                        />
+                    </Grid>
+                </Grid>
             </form>
         );
     }
