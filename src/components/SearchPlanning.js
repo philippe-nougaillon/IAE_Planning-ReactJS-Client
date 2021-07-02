@@ -39,7 +39,9 @@ class SearchPlanning extends Component {
         const { value } = event.target;
 
         this.setState(applyQueryDateState(value));
-        this.props.onFetchPlanning(value);
+    
+        if (value)
+            this.props.onFetchPlanning(value);
     }
 
     onSearchChange(event) {
