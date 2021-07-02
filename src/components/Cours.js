@@ -75,6 +75,7 @@ const Cours = ({ cours }) => {
                         <b>{ salle_json_v2 }</b>
                     </Typography>
                     { progress_bar_pct2
+                        && etat === "confirmé"
                         && <LinearProgress variant="determinate" 
                                             value={ progress_bar_pct2 } 
                                             color="secondary" />
