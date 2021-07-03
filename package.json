@@ -1,18 +1,18 @@
 {
   "name": "iae-planning-client",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "homepage": "http://philippe-nougaillon.github.io/IAE_planning-reactJS-client",
   "dependencies": {
-    "@material-ui/core": "^3.9.2",
-    "@material-ui/icons": "^3.0.2",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
-    "react-redux": "^6.0.0",
-    "react-scripts": "2.1.3",
-    "redux": "^4.0.1",
+    "@material-ui/core": "^4.11.4",
+    "@material-ui/icons": "^4.11.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.4",
+    "react-scripts": "4.0.3",
+    "redux": "^4.1.0",
     "redux-logger": "^3.0.6",
-    "redux-saga": "^1.0.0",
+    "redux-saga": "^1.1.3",
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
