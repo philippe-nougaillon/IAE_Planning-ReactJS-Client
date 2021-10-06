@@ -4,10 +4,10 @@ import { fetchPlanning } from '../api/planning';
 
 
 function* handleFetchPlanning(action) {
-    const { query } = action;
+    const { query, page } = action;
 
     try {
-        const result = yield call(fetchPlanning, query);
+        const result = yield call(fetchPlanning, query, page);
         yield put(doAddPlanning(result));
     } catch (error) {
         yield put(doFetchErrorPlanning(error));

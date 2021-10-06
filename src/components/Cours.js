@@ -13,6 +13,7 @@ const Cours = ({ cours }) => {
     const {
         id,
         etat,
+        date_json_v3,
         debut_fin_json_v2,
         formation_json_v2,
         formation_color_json_v2,
@@ -27,6 +28,10 @@ const Cours = ({ cours }) => {
     return(
         <div className="cours">
             <Grid container spacing={0}>
+                <Grid item xs={12} sm={1}>
+                    { date_json_v3 }
+                </Grid>
+
                 <Grid item xs={12} sm={2}>
                     <Typography noWrap variant="h6">
                         <Link href={ cours_url } target="_blank" rel="noreferrer" color="inherit">

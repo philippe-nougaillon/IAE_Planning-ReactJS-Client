@@ -9,6 +9,7 @@ const INITIAL_STATE = {
     size: 0,
     loading: false,
     error: null,
+    page: 0,
 };
 
 function planningReducer(state = INITIAL_STATE, action) {
@@ -29,6 +30,7 @@ function planningReducer(state = INITIAL_STATE, action) {
 const applyAddPlanning = (state, action) => ({
     planning: action.planning,
     size: action.planning.length,
+    page: action.page,
     error: null,
 });
 
